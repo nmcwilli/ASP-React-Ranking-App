@@ -2,7 +2,11 @@
 
 const RankItems = () => {
 
+    /* Sets an empty array to start for useState 
+    So array will never by NULL */
     const [items, setItems] = useState([]);
+
+    /* Sets dataType to 1 */
     const dataType = 1; 
 
     useEffect(() => {
@@ -18,8 +22,9 @@ const RankItems = () => {
 
     return (
         <main>
-            { 
-                (items != null) ? items.map((item) => <h3>{item.title }</h3>):<div>Loading ...</div>
+            {   
+                /* Removed null because it will never be null. Checking for 0 */
+                (items.length > 0) ? items.map((item) => <h3>{item.title }</h3>):<div>Loading ...</div>
             }
         </main>
         )
