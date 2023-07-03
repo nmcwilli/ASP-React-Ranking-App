@@ -4,6 +4,10 @@ const { env } = require('process');
 const target = env.ASPNETCORE_HTTPS_PORT ? `https://localhost:${env.ASPNETCORE_HTTPS_PORT}` :
   env.ASPNETCORE_URLS ? env.ASPNETCORE_URLS.split(';')[0] : 'http://localhost:42610';
 
+/* 
+Telling react code about the server-side Controller class called 
+Not case sensitive, and don't need to use Controller wording 
+*/
 const context = [
   "/weatherforecast",
   "/item", 

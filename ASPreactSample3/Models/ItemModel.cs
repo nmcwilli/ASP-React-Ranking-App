@@ -1,8 +1,12 @@
 ﻿namespace ASPreactSample3.Models
 {
+    /* 
+     * Server-side Model for Items
+     * model used to define an Id, Title string, ImageID, Ranking and ItemType 
+    */
+
     public class ItemModel
     {
-        /* Basic item model used to define an Id, Title string, ImageID, Ranking and ItemType */
 
         public int Id { get; set; }
 
